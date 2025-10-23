@@ -4,8 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>WargaKita - Login</title>
+
+  <!-- Bootstrap & Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
   <style>
     body {
       background: linear-gradient(180deg, #e8f2ff 0%, #cfe6ff 100%);
@@ -16,8 +22,23 @@
       align-items: center;
       font-family: 'Poppins', sans-serif;
       text-align: center;
-      position: relative;
       overflow-x: hidden;
+      color: #003366;
+    }
+
+    .card {
+      background: #ffffff;
+      border: none;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      padding: 40px 30px;
+      max-width: 400px;
+      width: 90%;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
     }
 
     .logo {
@@ -26,33 +47,36 @@
     }
 
     h4 {
-      color: #003366;
       font-weight: 700;
+      color: #003366;
+    }
+
+    .text-muted {
+      color: #555 !important;
     }
 
     .btn-custom {
-      width: 80%;
-      max-width: 300px;
+      width: 100%;
       border-radius: 12px;
       font-weight: 600;
       padding: 12px;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      margin-bottom: 15px;
-      transition: 0.3s;
-    }
-
-    .btn-custom:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+      margin-top: 15px;
+      transition: all 0.3s ease;
     }
 
     .btn-custom i {
       margin-right: 8px;
     }
 
+    .btn-custom:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
     footer {
       position: absolute;
-      bottom: 20px;
+      bottom: 15px;
       text-align: center;
       font-size: 0.9rem;
       color: #333;
@@ -61,37 +85,46 @@
 
     .illustration {
       width: 85%;
-      max-width: 320px;
+      max-width: 280px;
       margin-top: 25px;
+    }
+
+    @media (max-width: 576px) {
+      .card {
+        padding: 30px 20px;
+      }
+
+      h4 {
+        font-size: 1.4rem;
+      }
     }
   </style>
 </head>
+
 <body>
-  <div class="text-center">
+  <div class="card text-center">
     <!-- Logo -->
     <img src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png" alt="Logo WargaKita" class="logo">
 
-    <!-- Judul dan Subjudul -->
+    <!-- Judul -->
     <h4>WargaKita</h4>
-    <p class="text-muted">Pelayanan Warga Lebih Mudah dan Cepat</p>
+    <p class="text-muted mb-4">Pelayanan Warga Lebih Mudah dan Cepat</p>
 
-    <!-- Tombol Masuk -->
-    <div class="d-flex flex-column align-items-center mt-4">
-      <a href="warga-login.html" class="btn btn-primary btn-custom">
-        <i class="bi bi-person-fill"></i> MASUK SEBAGAI WARGA
-      </a>
-      <a href="rt-login.html" class="btn btn-primary btn-custom">
-        <i class="bi bi-people-fill"></i> MASUK SEBAGAI RT/RW
-      </a>
-    </div>
+    <!-- Tombol Login -->
+    <a href="warga-login.html" class="btn btn-primary btn-custom">
+      <i class="bi bi-person-fill"></i> Masuk Sebagai Warga
+    </a>
+    <a href="rt-login.html" class="btn btn-outline-primary btn-custom">
+      <i class="bi bi-people-fill"></i> Masuk Sebagai RT/RW
+    </a>
 
     <!-- Ilustrasi -->
-    <img src="https://cdn-icons-png.flaticon.com/512/826/826963.png" alt="Ilustrasi Warga" class="illustration">
+    <img src="https://cdn-icons-png.flaticon.com/512/826/826963.png" alt="Ilustrasi Warga" class="illustration mt-3">
   </div>
 
   <!-- Footer -->
   <footer>
-    © 2025 WargaKita
+    © 2025 WargaKita. Semua Hak Dilindungi.
   </footer>
 </body>
 </html>
